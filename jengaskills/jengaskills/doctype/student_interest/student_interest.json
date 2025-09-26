@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-24 18:08:39.682868",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_fe53",
+  "skill",
+  "column_break_3ziv",
+  "preferred_level"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_fe53",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "skill",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Skill",
+   "options": "Skills",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3ziv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "preferred_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Preferred Level",
+   "options": "\nBeginner\nIntermediate\nAdvanced",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-24 18:10:03.475456",
+ "modified_by": "Administrator",
+ "module": "Jengaskills",
+ "name": "Student Interest",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

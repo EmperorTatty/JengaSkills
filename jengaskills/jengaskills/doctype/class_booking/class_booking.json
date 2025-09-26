@@ -1,0 +1,203 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{student}-{trainer}-{##}",
+ "creation": "2025-09-26 09:39:17.303646",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_o0fn",
+  "student",
+  "skill",
+  "class_type",
+  "lesson_end_date",
+  "fee",
+  "status",
+  "amended_from",
+  "column_break_gwcy",
+  "trainer",
+  "class_mode",
+  "sessions_generated",
+  "hours_per_session",
+  "total_course_hours",
+  "number_of_sessions",
+  "section_break_mjjt",
+  "student_availability",
+  "section_break_o1ry",
+  "class_session"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_o0fn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Class Booking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Trainer",
+   "options": "Trainer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "skill",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Skill",
+   "options": "Skills",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class_type",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Class Type",
+   "options": "Online\nPhysical",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class_mode",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Class Mode",
+   "options": "Group Class\nPersonal Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gwcy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Booking\nPaid\nScheduled\nCompleted\nCancelled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fee",
+   "fieldtype": "Currency",
+   "label": "Fee",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_o1ry",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "class_session",
+   "fieldtype": "Table",
+   "label": "Class Session",
+   "options": "Class Session",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "skill.hours_per_session",
+   "fieldname": "hours_per_session",
+   "fieldtype": "Data",
+   "label": "Hours Per Session",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "skill.total_course_hours",
+   "fieldname": "total_course_hours",
+   "fieldtype": "Data",
+   "label": "Total Course Hours",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "skill.number_of_sessions",
+   "fieldname": "number_of_sessions",
+   "fieldtype": "Data",
+   "label": "Number Of Sessions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lesson_end_date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Lesson End Date",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "sessions_generated",
+   "fieldtype": "Check",
+   "label": "Sessions Generated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_mjjt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "student_availability",
+   "fieldtype": "Table",
+   "label": "Student Availability",
+   "options": "Student Availability",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-26 11:47:08.422487",
+ "modified_by": "Administrator",
+ "module": "Jengaskills",
+ "name": "Class Booking",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

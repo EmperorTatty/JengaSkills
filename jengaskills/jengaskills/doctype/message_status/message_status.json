@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-30 13:57:15.114816",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_x8hw",
+  "cost",
+  "message_id",
+  "pages",
+  "column_break_9lw2",
+  "mobile_number",
+  "status_code",
+  "status",
+  "section_break_uo6m",
+  "message_sent"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_x8hw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Data",
+   "label": "Cost"
+  },
+  {
+   "fieldname": "message_id",
+   "fieldtype": "Data",
+   "label": "Message ID"
+  },
+  {
+   "fieldname": "pages",
+   "fieldtype": "Data",
+   "label": "Pages"
+  },
+  {
+   "fieldname": "column_break_9lw2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "status_code",
+   "fieldtype": "Data",
+   "label": "Status Code"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
+  },
+  {
+   "fieldname": "section_break_uo6m",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "message_sent",
+   "fieldtype": "Text",
+   "label": "Message Sent"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-30 13:59:06.132777",
+ "modified_by": "Administrator",
+ "module": "JengaSkills",
+ "name": "Message Status",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

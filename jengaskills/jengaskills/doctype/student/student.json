@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{student_name}-{registration_no}",
+ "creation": "2025-09-24 18:05:09.971521",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_vxmi",
+  "student_name",
+  "mobile_no",
+  "registration_no",
+  "status",
+  "column_break_gq4g",
+  "preferred_language",
+  "email",
+  "section_break_3pdp",
+  "interest"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_vxmi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gq4g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "KIndly select language you are familiar with for better understanding of concepts",
+   "fieldname": "preferred_language",
+   "fieldtype": "Table MultiSelect",
+   "label": "Preferred Language",
+   "options": "Learning Language Details",
+   "reqd": 1
+  },
+  {
+   "description": "Email is mandatory for creating google meet invites.",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_3pdp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "interest",
+   "fieldtype": "Table",
+   "label": "Interest",
+   "options": "Student Interest",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registration_no",
+   "fieldtype": "Data",
+   "label": "Registration No"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-26 12:31:53.996480",
+ "modified_by": "Administrator",
+ "module": "Jengaskills",
+ "name": "Student",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

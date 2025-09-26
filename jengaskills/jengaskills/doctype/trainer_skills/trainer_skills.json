@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-24 17:48:31.874214",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_bplb",
+  "skill",
+  "rate",
+  "column_break_6wab",
+  "level"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_bplb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "skill",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Skill",
+   "options": "Skills",
+   "reqd": 1
+  },
+  {
+   "description": "Rate yourself how good you are in this skill in percentage.",
+   "fieldname": "rate",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Rate(%)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6wab",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Level",
+   "options": "\nBeginner\nIntermediate\nExpert",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-26 07:03:28.085744",
+ "modified_by": "Administrator",
+ "module": "Jengaskills",
+ "name": "Trainer Skills",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

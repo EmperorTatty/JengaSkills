@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-24 17:56:11.491396",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_wxlx",
+  "day",
+  "from_time",
+  "to_time",
+  "notes",
+  "column_break_hjxb",
+  "location_type",
+  "location_address"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_wxlx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "day",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Day",
+   "options": "\nSunday\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSartuday",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "From Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "To Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hjxb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Location Type",
+   "options": "\nOnline\nPhysical",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location_address",
+   "fieldtype": "Small Text",
+   "label": "Location Address"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-24 18:02:11.891839",
+ "modified_by": "Administrator",
+ "module": "Jengaskills",
+ "name": "Availability Schedule",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

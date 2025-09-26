@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{skill_name}",
+ "creation": "2025-09-24 17:35:37.684667",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_kzuj",
+  "skill_name",
+  "active",
+  "number_of_sessions",
+  "column_break_rfnq",
+  "hours_per_session",
+  "total_course_hours",
+  "description",
+  "section_break_fvsm",
+  "requirements"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_kzuj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "skill_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Skill Name",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "column_break_rfnq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_fvsm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "requirements",
+   "fieldtype": "Table",
+   "label": "Requirements",
+   "options": "Skills Requirement"
+  },
+  {
+   "fieldname": "hours_per_session",
+   "fieldtype": "Float",
+   "label": "Hours Per Session(Hrs)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_course_hours",
+   "fieldtype": "Float",
+   "label": "Total Course Hours(Hrs)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_sessions",
+   "fieldtype": "Float",
+   "label": "Number of sessions",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-26 11:08:22.675168",
+ "modified_by": "Administrator",
+ "module": "Jengaskills",
+ "name": "Skills",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
