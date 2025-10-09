@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
+
 def create_google_meet_event(summary, start_time, end_time, attendees=None):
     """
     Creates a Google Calendar event with Meet link.
