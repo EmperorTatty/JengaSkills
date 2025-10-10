@@ -10,9 +10,11 @@
   "scheduled_datetime",
   "status",
   "google_calendar_event",
+  "google_event_id",
   "column_break_rhyj",
   "end_datetime",
-  "location"
+  "location",
+  "google_meet_link"
  ],
  "fields": [
   {
@@ -54,13 +56,24 @@
    "in_list_view": 1,
    "label": "Location",
    "options": "Location"
+  },
+  {
+   "fieldname": "google_event_id",
+   "fieldtype": "Data",
+   "label": "Google Event ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "google_meet_link",
+   "fieldtype": "Data",
+   "label": "Google Meet Link"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-09-26 10:26:34.116925",
+ "modified": "2025-10-09 17:22:08.354915",
  "modified_by": "Administrator",
  "module": "Jengaskills",
  "name": "Class Session",
