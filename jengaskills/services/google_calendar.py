@@ -1,24 +1,31 @@
 import json
 import frappe
-from datetime import datetime, timedelta
+from datetime import datetime
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
 
+@frappe.whitelist(allow_guest=True)
 def create_google_meet_event(summary, start_time, end_time, attendees=None):
-    """
-    Creates a Google Calendar event with Meet link.
-    Returns event ID and meet link.
-    """
     try:
+        if isinstance(start_time, str):
+            start_time = datetime.fromisoformat(start_time)
+        if isinstance(end_time, str):
+            end_time = datetime.fromisoformat(end_time)
+
         SCOPES = ['https://www.googleapis.com/auth/calendar']
         SERVICE_ACCOUNT_FILE = frappe.get_site_path('google_credentials.json')
+
+        # 🔹 Use domain-wide delegation (replace with your domain user)
+        DELEGATED_USER = "abedtati1@gmail.com"
 
         credentials = service_account.Credentials.from_service_account_file(
             SERVICE_ACCOUNT_FILE, scopes=SCOPES
         )
 
-        service = build('calendar', 'v3', credentials=credentials)
+        delegated_creds = credentials.with_subject(DELEGATED_USER)
+
+        service = build('calendar', 'v3', credentials=delegated_creds)
 
         event = {
             'summary': summary,
@@ -46,8 +53,11 @@ def create_google_meet_event(summary, start_time, end_time, attendees=None):
             conferenceDataVersion=1
         ).execute()
 
-        return event['id'], event['hangoutLink']
+        return {
+            "event_id": event.get('id'),
+            "meet_link": event.get('hangoutLink')
+        }
 
     except Exception as e:
         frappe.log_error(f"Google Meet creation failed: {str(e)}", "Google Meet API Error")
-        return None, None
+        return {"error": str(e)}
