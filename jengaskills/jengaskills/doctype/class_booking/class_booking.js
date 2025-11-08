@@ -3,7 +3,7 @@
 
 frappe.ui.form.on("Class Booking", {
   refresh(frm) {
-    // Optional parent refresh logic
+    
   },
 });
 frappe.ui.form.on('Class Session', {
