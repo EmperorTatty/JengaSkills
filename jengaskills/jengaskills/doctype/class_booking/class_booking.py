@@ -90,12 +90,14 @@ def generate_class_sessions(doc):
                         if hasattr(student_doc, "email"):
                             attendees.append({"email": student_doc.email})
 
-                        _, meet_link = create_google_meet_event(
-                            summary=f"{doc.skill} Session {sessions_created + 1}",
-                            start_time=start_dt,
-                            end_time=start_dt + session_length,
-                            attendees=attendees
-                        )
+                        event = create_google_meet_event(
+                        summary=f"{doc.skill} Session {sessions_created + 1}",
+                        start_time=start_dt,
+                        end_time=start_dt + session_length,
+                        attendees=attendees
+                    )
+                    meet_link = event.get("meet_link")
+
 
                     doc.append("class_session", {
                         "session_number": sessions_created + 1,
@@ -103,10 +105,17 @@ def generate_class_sessions(doc):
                         "end_datetime": start_dt + session_length,
                         "status": "Scheduled",
                         "location": (
-                            t_slot.get("location_address") 
-                            if doc.class_type == "Physical" 
-                            else meet_link
+                            t_slot.get("location_address")
+                            if doc.class_type == "Physical"
+                            else "Online"
+                        ),
+                        "google_meet_link": (
+                            f'<a href="{meet_link}" target="_blank">Join Google Meet</a>'
+                            if meet_link else ""
                         )
+
+
+
                     })
 
                     sessions_created += 1
