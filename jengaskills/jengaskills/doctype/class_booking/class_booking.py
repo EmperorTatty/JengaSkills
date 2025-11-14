@@ -126,7 +126,9 @@ def generate_class_sessions(doc):
 
         current_date += timedelta(days=1)
 
-    # Set end date and fees
+    
+
+    
     if doc.class_session:
         last_session = doc.class_session[-1]
         doc.lesson_end_date = last_session.scheduled_datetime.date()
